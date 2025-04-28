@@ -1,0 +1,4011 @@
+2025-04-28 12:59:57 [INFO] Question: plot for open
+2025-04-28 12:59:57 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2025-04-28 12:59:57 [INFO] Prompt ID: 1df7a804-00b0-47ee-8af9-7214282fe5db
+2025-04-28 12:59:57 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-28 12:59:57 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-28 12:59:57 [INFO] Executing Step 1: CacheLookup
+2025-04-28 12:59:57 [INFO] Executing Step 2: PromptGeneration
+2025-04-28 12:59:57 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2010-07-07,35.20677185058594,5035402768,2988591541,41.908233642578125,247.21803978635995,222.83993266433865,No,Yes
+2003-05-01,90.97610473632812,7515893296,0738609725,186.48959350585932,24.800232235928668,137.94551682806986,No,No
+2012-11-19,598.2936401367188,8369884937,1800803410,7.527987003326416,240.38910163730125,21.501738678544204,Yes,Yes
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ plot for open
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-28 12:59:57 [INFO] Executing Step 3: CodeGenerator
+2025-04-28 12:59:58 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 12:59:58 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2010-07-07,35.20677185058594,5035402768,2988591541,41.908233642578125,247.21803978635995,222.83993266433865,No,Yes
+2003-05-01,90.97610473632812,7515893296,0738609725,186.48959350585932,24.800232235928668,137.94551682806986,No,No
+2012-11-19,598.2936401367188,8369884937,1800803410,7.527987003326416,240.38910163730125,21.501738678544204,Yes,Yes
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ plot for open
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-04-28 12:59:58 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is a list of DataFrames
+df = dfs[0]
+
+# Plot the 'Open' column
+plt.figure(figsize=(10,6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+plt.savefig('open_prices.png')
+
+result = {"type": "plot", "value": "open_prices.png"}
+            ```
+            
+2025-04-28 12:59:58 [INFO] Executing Step 4: CachePopulation
+2025-04-28 12:59:58 [INFO] Executing Step 5: CodeCleaning
+2025-04-28 12:59:58 [INFO] Saving charts to C:\Users\ADMIN\Desktop\Chant wih CSV files - LLM\exports\charts\temp_chart.png
+2025-04-28 12:59:58 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+        ```
+2025-04-28 12:59:58 [INFO] Executing Step 6: CodeExecution
+2025-04-28 12:59:59 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 12:59:59 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:00:07 [INFO] Question: plot for open
+2025-04-28 13:00:07 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2025-04-28 13:00:07 [INFO] Prompt ID: 641bf040-2d56-42b9-93ae-b7ac891a1148
+2025-04-28 13:00:07 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-28 13:00:07 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-28 13:00:07 [INFO] Executing Step 1: CacheLookup
+2025-04-28 13:00:07 [INFO] Using cached response
+2025-04-28 13:00:07 [INFO] Executing Step 2: PromptGeneration
+2025-04-28 13:00:07 [INFO] Executing Step 2: Skipping...
+2025-04-28 13:00:07 [INFO] Executing Step 3: CodeGenerator
+2025-04-28 13:00:07 [INFO] Executing Step 3: Skipping...
+2025-04-28 13:00:07 [INFO] Executing Step 4: CachePopulation
+2025-04-28 13:00:07 [INFO] Executing Step 4: Skipping...
+2025-04-28 13:00:07 [INFO] Executing Step 5: CodeCleaning
+2025-04-28 13:00:07 [INFO] Saving charts to C:\Users\ADMIN\Desktop\Chant wih CSV files - LLM\exports\charts\temp_chart.png
+2025-04-28 13:00:07 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+        ```
+2025-04-28 13:00:07 [INFO] Executing Step 6: CodeExecution
+2025-04-28 13:00:07 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:00:07 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:00:42 [INFO] Question: plot for open line graph
+
+2025-04-28 13:00:42 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2025-04-28 13:00:42 [INFO] Prompt ID: 51791858-f7b6-4d91-9e1a-9e319f4b7add
+2025-04-28 13:00:42 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-28 13:00:42 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-28 13:00:42 [INFO] Executing Step 1: CacheLookup
+2025-04-28 13:00:42 [INFO] Executing Step 2: PromptGeneration
+2025-04-28 13:00:42 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2000-04-28,6082703655,207.72496032714844,5371156220,5338461251,20.843610961767105,1620245734,Yes,Yes
+2012-02-02,4266368935,11.423189163208008,8100796928,9863327868,198.42923535201007,0472075005,No,No
+2017-03-08,8606298033,1169.1636962890625,6253899220,0789688763,22.91561195640523,7246139756,Yes,No
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ plot for open line graph
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-28 13:00:42 [INFO] Executing Step 3: CodeGenerator
+2025-04-28 13:00:43 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:00:43 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2000-04-28,6082703655,207.72496032714844,5371156220,5338461251,20.843610961767105,1620245734,Yes,Yes
+2012-02-02,4266368935,11.423189163208008,8100796928,9863327868,198.42923535201007,0472075005,No,No
+2017-03-08,8606298033,1169.1636962890625,6253899220,0789688763,22.91561195640523,7246139756,Yes,No
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ plot for open line graph
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-04-28 13:00:43 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is a list of DataFrames, we'll use the first one
+df = dfs[0]
+
+# Create a line graph of the 'Open' column
+plt.figure(figsize=(10,6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Line Graph')
+plt.savefig('open_line_graph.png')
+
+result = {"type": "plot", "value": "open_line_graph.png"}
+            ```
+            
+2025-04-28 13:00:43 [INFO] Executing Step 4: CachePopulation
+2025-04-28 13:00:43 [INFO] Executing Step 5: CodeCleaning
+2025-04-28 13:00:43 [INFO] Saving charts to C:\Users\ADMIN\Desktop\Chant wih CSV files - LLM\exports\charts\temp_chart.png
+2025-04-28 13:00:43 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Line Graph')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+        ```
+2025-04-28 13:00:43 [INFO] Executing Step 6: CodeExecution
+2025-04-28 13:00:43 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:00:44 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:00:51 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-04-28 13:00:51 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-04-28 13:00:51 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 13:00:51 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 13:00:51 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2010-07-07,35.20677185058594,5035402768,2988591541,41.908233642578125,247.21803978635995,222.83993266433865,No,Yes
+2003-05-01,90.97610473632812,7515893296,0738609725,186.48959350585932,24.800232235928668,137.94551682806986,No,No
+2012-11-19,598.2936401367188,8369884937,1800803410,7.527987003326416,240.38910163730125,21.501738678544204,Yes,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-04-28 13:00:51 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 13:00:52 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:00:52 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2010-07-07,35.20677185058594,5035402768,2988591541,41.908233642578125,247.21803978635995,222.83993266433865,No,Yes
+2003-05-01,90.97610473632812,7515893296,0738609725,186.48959350585932,24.800232235928668,137.94551682806986,No,No
+2012-11-19,598.2936401367188,8369884937,1800803410,7.527987003326416,240.38910163730125,21.501738678544204,Yes,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 13:00:52 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+plt.show()
+            ```
+            
+2025-04-28 13:00:52 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 13:00:52 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+        ```
+2025-04-28 13:00:52 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:00:52 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:00:52 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 13:00:52 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-04-28 13:00:52 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 13:00:52 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 13:00:52 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2010-07-07,35.20677185058594,5035402768,2988591541,41.908233642578125,247.21803978635995,222.83993266433865,No,Yes
+2003-05-01,90.97610473632812,7515893296,0738609725,186.48959350585932,24.800232235928668,137.94551682806986,No,No
+2012-11-19,598.2936401367188,8369884937,1800803410,7.527987003326416,240.38910163730125,21.501738678544204,Yes,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2025-04-28 13:00:52 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 13:00:53 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:00:53 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2010-07-07,35.20677185058594,5035402768,2988591541,41.908233642578125,247.21803978635995,222.83993266433865,No,Yes
+2003-05-01,90.97610473632812,7515893296,0738609725,186.48959350585932,24.800232235928668,137.94551682806986,No,No
+2012-11-19,598.2936401367188,8369884937,1800803410,7.527987003326416,240.38910163730125,21.501738678544204,Yes,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 13:00:53 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+plt.show()
+            ```
+            
+2025-04-28 13:00:53 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 13:00:53 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+        ```
+2025-04-28 13:00:53 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:00:53 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:00:53 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 13:00:53 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-04-28 13:00:53 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 13:00:53 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 13:00:53 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2010-07-07,35.20677185058594,5035402768,2988591541,41.908233642578125,247.21803978635995,222.83993266433865,No,Yes
+2003-05-01,90.97610473632812,7515893296,0738609725,186.48959350585932,24.800232235928668,137.94551682806986,No,No
+2012-11-19,598.2936401367188,8369884937,1800803410,7.527987003326416,240.38910163730125,21.501738678544204,Yes,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2025-04-28 13:00:53 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 13:00:54 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:00:54 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2010-07-07,35.20677185058594,5035402768,2988591541,41.908233642578125,247.21803978635995,222.83993266433865,No,Yes
+2003-05-01,90.97610473632812,7515893296,0738609725,186.48959350585932,24.800232235928668,137.94551682806986,No,No
+2012-11-19,598.2936401367188,8369884937,1800803410,7.527987003326416,240.38910163730125,21.501738678544204,Yes,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 13:00:54 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+plt.show()
+            ```
+            
+2025-04-28 13:00:54 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 13:00:54 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+        ```
+2025-04-28 13:00:54 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:00:54 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:00:54 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 13:00:54 [ERROR] Pipeline failed on step 6: No result returned
+2025-04-28 13:01:06 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-04-28 13:01:06 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-04-28 13:01:06 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 13:01:06 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 13:01:08 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2009-09-22,7035458454,9209004152,8798955203,7255182805,8926271067,29.365608427293655,No,Yes
+2004-01-14,2678309714,6094568840,5309039181,4655468993,8870498238,217.6864195391759,Yes,No
+2010-05-12,5938642640,2272758036,5317855121,6396351120,4096777249,701.3815829668345,No,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-04-28 13:01:08 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 13:01:10 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:01:10 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2009-09-22,7035458454,9209004152,8798955203,7255182805,8926271067,29.365608427293655,No,Yes
+2004-01-14,2678309714,6094568840,5309039181,4655468993,8870498238,217.6864195391759,Yes,No
+2010-05-12,5938642640,2272758036,5317855121,6396351120,4096777249,701.3815829668345,No,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 13:01:11 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+import pandas as pd
+
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+plt.show()
+
+result = {'type': 'plot'}
+            ```
+            
+2025-04-28 13:01:11 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 13:01:12 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+result = {'type': 'plot'}
+        ```
+2025-04-28 13:01:12 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:01:12 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:01:12 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\helpers\output_validator.py", line 87, in validate_result
+    if "plotly" in repr(type(result["value"])):
+                             ~~~~~~^^^^^^^^^
+KeyError: 'value'
+
+2025-04-28 13:01:12 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-04-28 13:01:12 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 13:01:12 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 13:01:12 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2009-09-22,7035458454,9209004152,8798955203,7255182805,8926271067,29.365608427293655,No,Yes
+2004-01-14,2678309714,6094568840,5309039181,4655468993,8870498238,217.6864195391759,Yes,No
+2010-05-12,5938642640,2272758036,5317855121,6396351120,4096777249,701.3815829668345,No,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+result = {'type': 'plot'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\helpers\output_validator.py", line 87, in validate_result
+    if "plotly" in repr(type(result["value"])):
+                             ~~~~~~^^^^^^^^^
+KeyError: 'value'
+
+
+Fix the python code above and return the new python code:
+2025-04-28 13:01:12 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 13:01:13 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:01:13 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2009-09-22,7035458454,9209004152,8798955203,7255182805,8926271067,29.365608427293655,No,Yes
+2004-01-14,2678309714,6094568840,5309039181,4655468993,8870498238,217.6864195391759,Yes,No
+2010-05-12,5938642640,2272758036,5317855121,6396351120,4096777249,701.3815829668345,No,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+result = {'type': 'plot'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\helpers\output_validator.py", line 87, in validate_result
+    if "plotly" in repr(type(result["value"])):
+                             ~~~~~~^^^^^^^^^
+KeyError: 'value'
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 13:01:13 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+plt.show()
+
+result = {'type': 'plot', 'value': plt.gcf()}
+            ```
+            
+2025-04-28 13:01:13 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 13:01:13 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+result = {'type': 'plot', 'value': plt.gcf()}
+        ```
+2025-04-28 13:01:13 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:01:14 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:01:14 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 7, in <module>
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\safe_libs\restricted_matplotlib.py", line 75, in __getattr__
+    raise AttributeError(f"'{name}' is not allowed in RestrictedMatplotlib")
+AttributeError: 'gcf' is not allowed in RestrictedMatplotlib
+
+2025-04-28 13:01:14 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-04-28 13:01:14 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 13:01:14 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 13:01:14 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2009-09-22,7035458454,9209004152,8798955203,7255182805,8926271067,29.365608427293655,No,Yes
+2004-01-14,2678309714,6094568840,5309039181,4655468993,8870498238,217.6864195391759,Yes,No
+2010-05-12,5938642640,2272758036,5317855121,6396351120,4096777249,701.3815829668345,No,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+result = {'type': 'plot', 'value': plt.gcf()}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 7, in <module>
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\safe_libs\restricted_matplotlib.py", line 75, in __getattr__
+    raise AttributeError(f"'{name}' is not allowed in RestrictedMatplotlib")
+AttributeError: 'gcf' is not allowed in RestrictedMatplotlib
+
+
+Fix the python code above and return the new python code:
+2025-04-28 13:01:14 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 13:01:14 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:01:14 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2009-09-22,7035458454,9209004152,8798955203,7255182805,8926271067,29.365608427293655,No,Yes
+2004-01-14,2678309714,6094568840,5309039181,4655468993,8870498238,217.6864195391759,Yes,No
+2010-05-12,5938642640,2272758036,5317855121,6396351120,4096777249,701.3815829668345,No,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+result = {'type': 'plot', 'value': plt.gcf()}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 7, in <module>
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\safe_libs\restricted_matplotlib.py", line 75, in __getattr__
+    raise AttributeError(f"'{name}' is not allowed in RestrictedMatplotlib")
+AttributeError: 'gcf' is not allowed in RestrictedMatplotlib
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 13:01:14 [INFO] Code generated:
+            ```
+            df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+plt.show()
+            ```
+            
+2025-04-28 13:01:14 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 13:01:14 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Prices Over Time')
+        ```
+2025-04-28 13:01:14 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:01:15 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:01:15 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 13:01:15 [ERROR] Pipeline failed on step 6: No result returned
+2025-04-28 13:01:39 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-04-28 13:01:39 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-04-28 13:01:39 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 13:01:39 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 13:01:39 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2000-04-28,6082703655,207.72496032714844,5371156220,5338461251,20.843610961767105,1620245734,Yes,Yes
+2012-02-02,4266368935,11.423189163208008,8100796928,9863327868,198.42923535201007,0472075005,No,No
+2017-03-08,8606298033,1169.1636962890625,6253899220,0789688763,22.91561195640523,7246139756,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open line graph
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Line Graph')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-04-28 13:01:39 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 13:01:39 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:01:39 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2000-04-28,6082703655,207.72496032714844,5371156220,5338461251,20.843610961767105,1620245734,Yes,Yes
+2012-02-02,4266368935,11.423189163208008,8100796928,9863327868,198.42923535201007,0472075005,No,No
+2017-03-08,8606298033,1169.1636962890625,6253899220,0789688763,22.91561195640523,7246139756,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open line graph
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Line Graph')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 13:01:39 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Line Graph')
+plt.savefig('temp_chart.png')  # removed the full path, assuming you want to save it in the current working directory
+result = plt.gcf()  # return the plot object
+            ```
+            
+2025-04-28 13:01:39 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 13:01:39 [INFO] Saving charts to C:\Users\ADMIN\Desktop\Chant wih CSV files - LLM\exports\charts\temp_chart.png
+2025-04-28 13:01:39 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Line Graph')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = plt.gcf()
+        ```
+2025-04-28 13:01:40 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:01:40 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:02:13 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 8, in <module>
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\safe_libs\restricted_matplotlib.py", line 75, in __getattr__
+    raise AttributeError(f"'{name}' is not allowed in RestrictedMatplotlib")
+AttributeError: 'gcf' is not allowed in RestrictedMatplotlib
+
+2025-04-28 13:02:13 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-04-28 13:02:13 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 13:02:13 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 13:02:13 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2000-04-28,6082703655,207.72496032714844,5371156220,5338461251,20.843610961767105,1620245734,Yes,Yes
+2012-02-02,4266368935,11.423189163208008,8100796928,9863327868,198.42923535201007,0472075005,No,No
+2017-03-08,8606298033,1169.1636962890625,6253899220,0789688763,22.91561195640523,7246139756,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open line graph
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Line Graph')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = plt.gcf()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 8, in <module>
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\safe_libs\restricted_matplotlib.py", line 75, in __getattr__
+    raise AttributeError(f"'{name}' is not allowed in RestrictedMatplotlib")
+AttributeError: 'gcf' is not allowed in RestrictedMatplotlib
+
+
+Fix the python code above and return the new python code:
+2025-04-28 13:02:13 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 13:02:14 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:02:14 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2000-04-28,6082703655,207.72496032714844,5371156220,5338461251,20.843610961767105,1620245734,Yes,Yes
+2012-02-02,4266368935,11.423189163208008,8100796928,9863327868,198.42923535201007,0472075005,No,No
+2017-03-08,8606298033,1169.1636962890625,6253899220,0789688763,22.91561195640523,7246139756,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open line graph
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Line Graph')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = plt.gcf()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 8, in <module>
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\safe_libs\restricted_matplotlib.py", line 75, in __getattr__
+    raise AttributeError(f"'{name}' is not allowed in RestrictedMatplotlib")
+AttributeError: 'gcf' is not allowed in RestrictedMatplotlib
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 13:02:14 [INFO] Code generated:
+            ```
+            df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Line Graph')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+plt.show()
+            ```
+            
+2025-04-28 13:02:14 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 13:02:14 [INFO] Saving charts to C:\Users\ADMIN\Desktop\Chant wih CSV files - LLM\exports\charts\temp_chart.png
+2025-04-28 13:02:14 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Line Graph')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+        ```
+2025-04-28 13:02:14 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:02:14 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:02:30 [INFO] Question: give the summary of the data
+2025-04-28 13:02:30 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2025-04-28 13:02:30 [INFO] Prompt ID: 185ff867-3810-4261-b82f-1960d674419c
+2025-04-28 13:02:30 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-28 13:02:30 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-28 13:02:30 [INFO] Executing Step 1: CacheLookup
+2025-04-28 13:02:30 [INFO] Executing Step 2: PromptGeneration
+2025-04-28 13:02:30 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2016-12-19,24.00672721862793,426.07904052734375,5524612131,1227.875,22.331847404451494,7246468594,No,No
+2011-02-24,34.81047058105469,25.263473510742188,2124232339,318.3477783203125,922.8991342264223,0643459092,Yes,Yes
+2013-02-14,37.85236740112305,239.372299194336,1991290602,24.86002922058105,252.2935917264961,8869292429,No,Yes
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give the summary of the data
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-28 13:02:30 [INFO] Executing Step 3: CodeGenerator
+2025-04-28 13:02:31 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:02:31 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2016-12-19,24.00672721862793,426.07904052734375,5524612131,1227.875,22.331847404451494,7246468594,No,No
+2011-02-24,34.81047058105469,25.263473510742188,2124232339,318.3477783203125,922.8991342264223,0643459092,Yes,Yes
+2013-02-14,37.85236740112305,239.372299194336,1991290602,24.86002922058105,252.2935917264961,8869292429,No,Yes
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give the summary of the data
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-04-28 13:02:31 [INFO] Code generated:
+            ```
+            import pandas as pd
+
+# Assuming dfs is a list of DataFrames, we'll work with the first one
+df = dfs[0]
+
+# Calculate summary statistics
+summary_stats = df.describe()
+
+# Create a result dictionary with a summary of the data
+result = {
+    "type": "dataframe",
+    "value": summary_stats
+}
+
+print(result)
+            ```
+            
+2025-04-28 13:02:31 [INFO] Executing Step 4: CachePopulation
+2025-04-28 13:02:31 [INFO] Executing Step 5: CodeCleaning
+2025-04-28 13:02:31 [INFO] 
+Code running:
+```
+df = dfs[0]
+summary_stats = df.describe()
+result = {'type': 'dataframe', 'value': summary_stats}
+print(result)
+        ```
+2025-04-28 13:02:31 [INFO] Executing Step 6: CodeExecution
+2025-04-28 13:02:31 [INFO] Executing Step 7: ResultValidation
+2025-04-28 13:02:31 [INFO] Answer: {'type': 'dataframe', 'value':               Open         High          Low        Close  Predicted High  Predicted Low
+count  7260.000000  7260.000000  7260.000000  7260.000000     7260.000000    7260.000000
+mean    318.648947   322.201904   314.832185   318.371099      322.201904     314.832185
+std     394.308151   398.007103   390.373081   394.033338      397.972083     390.334358
+min       5.462565     5.487558     5.428648     5.487558        6.105377       4.802060
+25%      24.777912    25.227772    24.353046    24.697581       25.600204      23.922749
+50%     196.255806   198.764496   193.695671   195.918640      198.671479     193.672508
+75%     357.135498   361.069977   353.449608   357.475517      361.046073     352.930873
+max    1604.449951  1608.800049  1585.500000  1600.900024     1619.950636    1587.675030}
+2025-04-28 13:02:31 [INFO] Executing Step 8: ResultParsing
+2025-04-28 13:02:43 [INFO] Question: give any graph
+2025-04-28 13:02:43 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2025-04-28 13:02:43 [INFO] Prompt ID: e7d25c8d-c066-4180-9709-45dd68c36893
+2025-04-28 13:02:43 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-28 13:02:43 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-28 13:02:43 [INFO] Executing Step 1: CacheLookup
+2025-04-28 13:02:43 [INFO] Executing Step 2: PromptGeneration
+2025-04-28 13:02:43 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2007-11-29,37.634578704833984,122.29199981689452,22.864229202270508,4083132728,4257407176,7460844252,Yes,No
+2005-08-02,199.23309326171875,250.64144897460932,189.8154754638672,3525353269,9969271000,9294023527,Yes,Yes
+2015-05-15,1171.75,135.0926513671875,140.36721801757812,5582632495,8875848265,0571632886,No,Yes
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give any graph
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-28 13:02:43 [INFO] Executing Step 3: CodeGenerator
+2025-04-28 13:02:44 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:02:44 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2007-11-29,37.634578704833984,122.29199981689452,22.864229202270508,4083132728,4257407176,7460844252,Yes,No
+2005-08-02,199.23309326171875,250.64144897460932,189.8154754638672,3525353269,9969271000,9294023527,Yes,Yes
+2015-05-15,1171.75,135.0926513671875,140.36721801757812,5582632495,8875848265,0571632886,No,Yes
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give any graph
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-04-28 13:02:44 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is a list of pandas DataFrames
+dfs = [...]  # your list of DataFrames
+
+# Select the first DataFrame
+df = dfs[0]
+
+# Plot a line chart of High and Low prices over time
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.savefig('high_low_prices.png')
+
+# Declare result var:
+result = {"type": "plot", "value": "high_low_prices.png"}
+            ```
+            
+2025-04-28 13:02:44 [INFO] Executing Step 4: CachePopulation
+2025-04-28 13:02:44 [INFO] Executing Step 5: CodeCleaning
+2025-04-28 13:02:44 [INFO] Saving charts to C:\Users\ADMIN\Desktop\Chant wih CSV files - LLM\exports\charts\temp_chart.png
+2025-04-28 13:02:44 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+        ```
+2025-04-28 13:02:44 [INFO] Executing Step 6: CodeExecution
+2025-04-28 13:02:44 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:02:45 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:02:45 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:02:45 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:02:50 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 13:02:50 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-04-28 13:02:50 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 13:02:50 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 13:02:51 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2000-04-28,6082703655,207.72496032714844,5371156220,5338461251,20.843610961767105,1620245734,Yes,Yes
+2012-02-02,4266368935,11.423189163208008,8100796928,9863327868,198.42923535201007,0472075005,No,No
+2017-03-08,8606298033,1169.1636962890625,6253899220,0789688763,22.91561195640523,7246139756,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open line graph
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Line Graph')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2025-04-28 13:02:52 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 13:02:54 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:02:54 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2000-04-28,6082703655,207.72496032714844,5371156220,5338461251,20.843610961767105,1620245734,Yes,Yes
+2012-02-02,4266368935,11.423189163208008,8100796928,9863327868,198.42923535201007,0472075005,No,No
+2017-03-08,8606298033,1169.1636962890625,6253899220,0789688763,22.91561195640523,7246139756,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ plot for open line graph
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Line Graph')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 13:02:54 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Line Graph')
+plt.show()  # Add this line to display the plot
+            ```
+            
+2025-04-28 13:02:55 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 13:02:56 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open')
+plt.title('Open Line Graph')
+        ```
+2025-04-28 13:02:57 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:02:57 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:02:57 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 13:02:57 [ERROR] Pipeline failed on step 6: No result returned
+2025-04-28 13:03:22 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-04-28 13:03:22 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-04-28 13:03:22 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 13:03:22 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 13:03:22 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2007-11-29,37.634578704833984,122.29199981689452,22.864229202270508,4083132728,4257407176,7460844252,Yes,No
+2005-08-02,199.23309326171875,250.64144897460932,189.8154754638672,3525353269,9969271000,9294023527,Yes,Yes
+2015-05-15,1171.75,135.0926513671875,140.36721801757812,5582632495,8875848265,0571632886,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give any graph
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-04-28 13:03:22 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 13:03:23 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:03:23 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2007-11-29,37.634578704833984,122.29199981689452,22.864229202270508,4083132728,4257407176,7460844252,Yes,No
+2005-08-02,199.23309326171875,250.64144897460932,189.8154754638672,3525353269,9969271000,9294023527,Yes,Yes
+2015-05-15,1171.75,135.0926513671875,140.36721801757812,5582632495,8875848265,0571632886,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give any graph
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 13:03:23 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+import pandas as pd
+
+df = dfs[0]
+
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+
+result = {'type': 'plot', 'value': plt}
+            ```
+            
+2025-04-28 13:03:23 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 13:03:23 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+result = {'type': 'plot', 'value': plt}
+        ```
+2025-04-28 13:03:23 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:03:24 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:03:24 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:03:24 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:03:24 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'pandasai.safe_libs.restricted_matplotlib.RestrictedMatplotlib'> must match with type plot
+
+2025-04-28 13:03:24 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-04-28 13:03:24 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 13:03:24 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 13:03:24 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2007-11-29,37.634578704833984,122.29199981689452,22.864229202270508,4083132728,4257407176,7460844252,Yes,No
+2005-08-02,199.23309326171875,250.64144897460932,189.8154754638672,3525353269,9969271000,9294023527,Yes,Yes
+2015-05-15,1171.75,135.0926513671875,140.36721801757812,5582632495,8875848265,0571632886,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give any graph
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+result = {'type': 'plot', 'value': plt}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'pandasai.safe_libs.restricted_matplotlib.RestrictedMatplotlib'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-04-28 13:03:24 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 13:03:25 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:03:25 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2007-11-29,37.634578704833984,122.29199981689452,22.864229202270508,4083132728,4257407176,7460844252,Yes,No
+2005-08-02,199.23309326171875,250.64144897460932,189.8154754638672,3525353269,9969271000,9294023527,Yes,Yes
+2015-05-15,1171.75,135.0926513671875,140.36721801757812,5582632495,8875848265,0571632886,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give any graph
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+result = {'type': 'plot', 'value': plt}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'pandasai.safe_libs.restricted_matplotlib.RestrictedMatplotlib'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 13:03:25 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.show()  # <--- Add this line to display the plot
+            ```
+            
+2025-04-28 13:03:25 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 13:03:25 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+        ```
+2025-04-28 13:03:25 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:03:25 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:03:26 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:03:26 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:03:26 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 13:03:26 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-04-28 13:03:26 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 13:03:26 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 13:03:26 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2007-11-29,37.634578704833984,122.29199981689452,22.864229202270508,4083132728,4257407176,7460844252,Yes,No
+2005-08-02,199.23309326171875,250.64144897460932,189.8154754638672,3525353269,9969271000,9294023527,Yes,Yes
+2015-05-15,1171.75,135.0926513671875,140.36721801757812,5582632495,8875848265,0571632886,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give any graph
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2025-04-28 13:03:26 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 13:03:26 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:03:26 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2007-11-29,37.634578704833984,122.29199981689452,22.864229202270508,4083132728,4257407176,7460844252,Yes,No
+2005-08-02,199.23309326171875,250.64144897460932,189.8154754638672,3525353269,9969271000,9294023527,Yes,Yes
+2015-05-15,1171.75,135.0926513671875,140.36721801757812,5582632495,8875848265,0571632886,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give any graph
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 13:03:26 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.show()
+            ```
+            
+2025-04-28 13:03:26 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 13:03:26 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+        ```
+2025-04-28 13:03:27 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:03:27 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:03:27 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:03:27 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:03:27 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 13:03:27 [ERROR] Pipeline failed on step 6: No result returned
+2025-04-28 13:06:13 [INFO] Question: give line grapgh fro open price
+
+2025-04-28 13:06:13 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2025-04-28 13:06:13 [INFO] Prompt ID: 05c0f87e-cf65-497b-840d-dcb1aea2ed1e
+2025-04-28 13:06:13 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-28 13:06:13 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-28 13:06:13 [INFO] Executing Step 1: CacheLookup
+2025-04-28 13:06:13 [INFO] Executing Step 2: PromptGeneration
+2025-04-28 13:06:13 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2017-10-30,4806870830,60.85226821899414,8503202394,4897730824,9.13230086652522,34.06272548210132,No,No
+2001-09-26,6596735413,8.791873931884766,3370850681,7394790924,607.9287404624656,303.9781245744962,Yes,No
+2021-09-20,0039621640,10.282477378845217,4360639842,7780812208,206.59049260235903,54.81273820199053,No,Yes
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give line grapgh fro open price
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-28 13:06:13 [INFO] Executing Step 3: CodeGenerator
+2025-04-28 13:06:14 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:06:14 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2017-10-30,4806870830,60.85226821899414,8503202394,4897730824,9.13230086652522,34.06272548210132,No,No
+2001-09-26,6596735413,8.791873931884766,3370850681,7394790924,607.9287404624656,303.9781245744962,Yes,No
+2021-09-20,0039621640,10.282477378845217,4360639842,7780812208,206.59049260235903,54.81273820199053,No,Yes
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give line grapgh fro open price
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-04-28 13:06:14 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is a list of DataFrames, we'll use the first DataFrame
+df = dfs[0]
+
+# Create a line graph for the Open price
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open Price')
+plt.title('Open Price Over Time')
+plt.savefig('open_price_line_graph.png')
+
+result = {"type": "plot", "value": "open_price_line_graph.png"}
+            ```
+            
+2025-04-28 13:06:14 [INFO] Executing Step 4: CachePopulation
+2025-04-28 13:06:14 [INFO] Executing Step 5: CodeCleaning
+2025-04-28 13:06:14 [INFO] Saving charts to C:\Users\ADMIN\Desktop\Chant wih CSV files - LLM\exports\charts\temp_chart.png
+2025-04-28 13:06:14 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open Price')
+plt.title('Open Price Over Time')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+        ```
+2025-04-28 13:06:14 [INFO] Executing Step 6: CodeExecution
+2025-04-28 13:06:14 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:06:14 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:06:46 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-04-28 13:06:46 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-04-28 13:06:46 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 13:06:46 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 13:06:46 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2017-10-30,4806870830,60.85226821899414,8503202394,4897730824,9.13230086652522,34.06272548210132,No,No
+2001-09-26,6596735413,8.791873931884766,3370850681,7394790924,607.9287404624656,303.9781245744962,Yes,No
+2021-09-20,0039621640,10.282477378845217,4360639842,7780812208,206.59049260235903,54.81273820199053,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give line grapgh fro open price
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open Price')
+plt.title('Open Price Over Time')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-04-28 13:06:46 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 13:06:46 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:06:46 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2017-10-30,4806870830,60.85226821899414,8503202394,4897730824,9.13230086652522,34.06272548210132,No,No
+2001-09-26,6596735413,8.791873931884766,3370850681,7394790924,607.9287404624656,303.9781245744962,Yes,No
+2021-09-20,0039621640,10.282477378845217,4360639842,7780812208,206.59049260235903,54.81273820199053,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give line grapgh fro open price
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open Price')
+plt.title('Open Price Over Time')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 13:06:46 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open Price')
+plt.title('Open Price Over Time')
+plt.show()
+            ```
+            
+2025-04-28 13:06:46 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 13:06:46 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open Price')
+plt.title('Open Price Over Time')
+        ```
+2025-04-28 13:06:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:06:47 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:06:47 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 13:06:47 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-04-28 13:06:47 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 13:06:47 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 13:06:47 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2017-10-30,4806870830,60.85226821899414,8503202394,4897730824,9.13230086652522,34.06272548210132,No,No
+2001-09-26,6596735413,8.791873931884766,3370850681,7394790924,607.9287404624656,303.9781245744962,Yes,No
+2021-09-20,0039621640,10.282477378845217,4360639842,7780812208,206.59049260235903,54.81273820199053,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give line grapgh fro open price
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open Price')
+plt.title('Open Price Over Time')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2025-04-28 13:06:47 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 13:06:47 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:06:47 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2017-10-30,4806870830,60.85226821899414,8503202394,4897730824,9.13230086652522,34.06272548210132,No,No
+2001-09-26,6596735413,8.791873931884766,3370850681,7394790924,607.9287404624656,303.9781245744962,Yes,No
+2021-09-20,0039621640,10.282477378845217,4360639842,7780812208,206.59049260235903,54.81273820199053,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give line grapgh fro open price
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open Price')
+plt.title('Open Price Over Time')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 13:06:47 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open Price')
+plt.title('Open Price Over Time')
+plt.show()
+            ```
+            
+2025-04-28 13:06:47 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 13:06:47 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open Price')
+plt.title('Open Price Over Time')
+        ```
+2025-04-28 13:06:48 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:06:48 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:06:48 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 13:06:48 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-04-28 13:06:48 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 13:06:48 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 13:06:48 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2017-10-30,4806870830,60.85226821899414,8503202394,4897730824,9.13230086652522,34.06272548210132,No,No
+2001-09-26,6596735413,8.791873931884766,3370850681,7394790924,607.9287404624656,303.9781245744962,Yes,No
+2021-09-20,0039621640,10.282477378845217,4360639842,7780812208,206.59049260235903,54.81273820199053,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give line grapgh fro open price
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open Price')
+plt.title('Open Price Over Time')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2025-04-28 13:06:48 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 13:06:48 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:06:48 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2017-10-30,4806870830,60.85226821899414,8503202394,4897730824,9.13230086652522,34.06272548210132,No,No
+2001-09-26,6596735413,8.791873931884766,3370850681,7394790924,607.9287404624656,303.9781245744962,Yes,No
+2021-09-20,0039621640,10.282477378845217,4360639842,7780812208,206.59049260235903,54.81273820199053,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give line grapgh fro open price
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open Price')
+plt.title('Open Price Over Time')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 13:06:48 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open Price')
+plt.title('Open Price Over Time')
+plt.show()
+            ```
+            
+2025-04-28 13:06:48 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 13:06:48 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Open'])
+plt.xlabel('Date')
+plt.ylabel('Open Price')
+plt.title('Open Price Over Time')
+        ```
+2025-04-28 13:06:49 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:06:49 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 13:06:49 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 13:06:49 [ERROR] Pipeline failed on step 6: No result returned
+2025-04-28 13:12:32 [INFO] Question: give summary of the data
+2025-04-28 13:12:32 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2025-04-28 13:12:32 [INFO] Prompt ID: 5cefb9a6-cebf-4d64-a2fe-f8c52af0383e
+2025-04-28 13:12:32 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-28 13:12:33 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-28 13:12:33 [INFO] Executing Step 1: CacheLookup
+2025-04-28 13:12:33 [INFO] Executing Step 2: PromptGeneration
+2025-04-28 13:12:33 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2001-11-07,6.372992992401123,0828776813,5787825649,7005089972,252.27052166588263,195.14898535243248,Yes,No
+2021-08-13,40.70146942138672,4750227128,6984242325,6379229365,11.633116420309218,216.6285701853338,No,No
+2016-10-25,236.46929931640625,7774334457,7797205527,0694219804,35.54580984265348,1158.0775935588567,Yes,Yes
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give summary of the data
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-28 13:12:33 [INFO] Executing Step 3: CodeGenerator
+2025-04-28 13:12:33 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-04-28 13:12:33 [ERROR] Pipeline failed on step 3: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2025-04-28 13:13:06 [INFO] Question: give the line plat for for open 
+2025-04-28 13:13:07 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2025-04-28 13:13:07 [INFO] Prompt ID: 750dfdf1-ea36-4102-9c35-613096c57788
+2025-04-28 13:13:07 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-28 13:13:07 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-28 13:13:07 [INFO] Executing Step 1: CacheLookup
+2025-04-28 13:13:07 [INFO] Executing Step 2: PromptGeneration
+2025-04-28 13:13:07 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2000-09-12,3956379107,228.72032165527344,59.98111724853516,6782954955,6160809564,8396618942,No,No
+2012-09-06,8834272919,316.0276794433594,172.1574249267578,7229815894,2255661664,2039132510,No,Yes
+2006-02-06,9159305681,1120.06005859375,504.2544860839844,6864268306,4571319340,1693736974,Yes,No
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give the line plat for for open 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-28 13:13:07 [INFO] Executing Step 3: CodeGenerator
+2025-04-28 13:13:08 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-04-28 13:13:08 [ERROR] Pipeline failed on step 3: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2025-04-28 14:11:11 [INFO] Question: give the line plot for heigh, low combined 
+
+2025-04-28 14:11:11 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2025-04-28 14:11:11 [INFO] Prompt ID: d2c5336a-0373-4d3e-8418-2ccea8708bf5
+2025-04-28 14:11:11 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-28 14:11:11 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-28 14:11:11 [INFO] Executing Step 1: CacheLookup
+2025-04-28 14:11:12 [INFO] Executing Step 2: PromptGeneration
+2025-04-28 14:11:12 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2004-05-31,248.46990966796875,5141740734,20.32931327819824,179.97496032714844,462.00641812593847,23.099252373331296,No,Yes
+1998-02-23,181.7236328125,0948337292,142.07586669921875,19.875885009765625,20.42921037782512,1321.2128181908,Yes,No
+2006-02-23,1207.7451171875,2791404912,1214.6676025390625,192.8441925048828,998.7759783623268,30.17850167844011,No,Yes
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give the line plot for heigh, low combined 
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-28 14:11:12 [INFO] Executing Step 3: CodeGenerator
+2025-04-28 14:11:13 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 14:11:13 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2004-05-31,248.46990966796875,5141740734,20.32931327819824,179.97496032714844,462.00641812593847,23.099252373331296,No,Yes
+1998-02-23,181.7236328125,0948337292,142.07586669921875,19.875885009765625,20.42921037782512,1321.2128181908,Yes,No
+2006-02-23,1207.7451171875,2791404912,1214.6676025390625,192.8441925048828,998.7759783623268,30.17850167844011,No,Yes
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give the line plot for heigh, low combined 
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-04-28 14:11:13 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is a list of dataframes, we'll use the first dataframe
+df = dfs[0]
+
+# Create a line plot for High and Low columns
+plt.plot(df['High'], label='High')
+plt.plot(df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.savefig('high_low_plot.png')
+
+# Declare result var:
+result = {"type": "plot", "value": "high_low_plot.png"}
+            ```
+            
+2025-04-28 14:11:13 [INFO] Executing Step 4: CachePopulation
+2025-04-28 14:11:13 [INFO] Executing Step 5: CodeCleaning
+2025-04-28 14:11:13 [INFO] Saving charts to C:\Users\ADMIN\Desktop\Chant wih CSV files - LLM\exports\charts\temp_chart.png
+2025-04-28 14:11:13 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.plot(df['High'], label='High')
+plt.plot(df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+        ```
+2025-04-28 14:11:13 [INFO] Executing Step 6: CodeExecution
+2025-04-28 14:11:14 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-04-28 14:11:14 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-04-28 14:11:14 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 14:11:14 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 14:11:14 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2004-05-31,248.46990966796875,5141740734,20.32931327819824,179.97496032714844,462.00641812593847,23.099252373331296,No,Yes
+1998-02-23,181.7236328125,0948337292,142.07586669921875,19.875885009765625,20.42921037782512,1321.2128181908,Yes,No
+2006-02-23,1207.7451171875,2791404912,1214.6676025390625,192.8441925048828,998.7759783623268,30.17850167844011,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh, low combined 
+
+
+You generated this python code:
+df = dfs[0]
+plt.plot(df['High'], label='High')
+plt.plot(df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-04-28 14:11:14 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 14:11:14 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 14:11:14 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2004-05-31,248.46990966796875,5141740734,20.32931327819824,179.97496032714844,462.00641812593847,23.099252373331296,No,Yes
+1998-02-23,181.7236328125,0948337292,142.07586669921875,19.875885009765625,20.42921037782512,1321.2128181908,Yes,No
+2006-02-23,1207.7451171875,2791404912,1214.6676025390625,192.8441925048828,998.7759783623268,30.17850167844011,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh, low combined 
+
+
+You generated this python code:
+df = dfs[0]
+plt.plot(df['High'], label='High')
+plt.plot(df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 14:11:14 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+import pandas as pd
+
+df = dfs[0]
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.show()
+            ```
+            
+2025-04-28 14:11:14 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 14:11:14 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+        ```
+2025-04-28 14:11:14 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:15 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:15 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:15 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:15 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 14:11:15 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-04-28 14:11:15 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 14:11:15 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 14:11:15 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2004-05-31,248.46990966796875,5141740734,20.32931327819824,179.97496032714844,462.00641812593847,23.099252373331296,No,Yes
+1998-02-23,181.7236328125,0948337292,142.07586669921875,19.875885009765625,20.42921037782512,1321.2128181908,Yes,No
+2006-02-23,1207.7451171875,2791404912,1214.6676025390625,192.8441925048828,998.7759783623268,30.17850167844011,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh, low combined 
+
+
+You generated this python code:
+df = dfs[0]
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2025-04-28 14:11:15 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 14:11:16 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 14:11:16 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2004-05-31,248.46990966796875,5141740734,20.32931327819824,179.97496032714844,462.00641812593847,23.099252373331296,No,Yes
+1998-02-23,181.7236328125,0948337292,142.07586669921875,19.875885009765625,20.42921037782512,1321.2128181908,Yes,No
+2006-02-23,1207.7451171875,2791404912,1214.6676025390625,192.8441925048828,998.7759783623268,30.17850167844011,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh, low combined 
+
+
+You generated this python code:
+df = dfs[0]
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 14:11:16 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.show()
+            ```
+            
+2025-04-28 14:11:16 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 14:11:16 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+        ```
+2025-04-28 14:11:16 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:16 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:16 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:17 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:17 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 14:11:17 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-04-28 14:11:17 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 14:11:17 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 14:11:17 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2004-05-31,248.46990966796875,5141740734,20.32931327819824,179.97496032714844,462.00641812593847,23.099252373331296,No,Yes
+1998-02-23,181.7236328125,0948337292,142.07586669921875,19.875885009765625,20.42921037782512,1321.2128181908,Yes,No
+2006-02-23,1207.7451171875,2791404912,1214.6676025390625,192.8441925048828,998.7759783623268,30.17850167844011,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh, low combined 
+
+
+You generated this python code:
+df = dfs[0]
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2025-04-28 14:11:17 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 14:11:17 [INFO] Question: give the line plot for heigh, low combined 
+
+2025-04-28 14:11:17 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2025-04-28 14:11:17 [INFO] Prompt ID: 544c959f-9831-4f47-adef-ad9d9058ddce
+2025-04-28 14:11:17 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-28 14:11:17 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-28 14:11:17 [INFO] Executing Step 1: CacheLookup
+2025-04-28 14:11:17 [INFO] Using cached response
+2025-04-28 14:11:17 [INFO] Executing Step 2: PromptGeneration
+2025-04-28 14:11:17 [INFO] Executing Step 2: Skipping...
+2025-04-28 14:11:17 [INFO] Executing Step 3: CodeGenerator
+2025-04-28 14:11:17 [INFO] Executing Step 3: Skipping...
+2025-04-28 14:11:17 [INFO] Executing Step 4: CachePopulation
+2025-04-28 14:11:17 [INFO] Executing Step 4: Skipping...
+2025-04-28 14:11:17 [INFO] Executing Step 5: CodeCleaning
+2025-04-28 14:11:17 [INFO] Saving charts to C:\Users\ADMIN\Desktop\Chant wih CSV files - LLM\exports\charts\temp_chart.png
+2025-04-28 14:11:17 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.plot(df['High'], label='High')
+plt.plot(df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+        ```
+2025-04-28 14:11:17 [INFO] Executing Step 6: CodeExecution
+2025-04-28 14:11:17 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 14:11:17 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2004-05-31,248.46990966796875,5141740734,20.32931327819824,179.97496032714844,462.00641812593847,23.099252373331296,No,Yes
+1998-02-23,181.7236328125,0948337292,142.07586669921875,19.875885009765625,20.42921037782512,1321.2128181908,Yes,No
+2006-02-23,1207.7451171875,2791404912,1214.6676025390625,192.8441925048828,998.7759783623268,30.17850167844011,No,Yes
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh, low combined 
+
+
+You generated this python code:
+df = dfs[0]
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 14:11:19 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.show()
+            ```
+            
+2025-04-28 14:11:20 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 14:11:21 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+        ```
+2025-04-28 14:11:23 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:24 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:24 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:24 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:24 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 14:11:24 [ERROR] Pipeline failed on step 6: No result returned
+2025-04-28 14:11:50 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-04-28 14:11:50 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-04-28 14:11:50 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 14:11:50 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 14:11:50 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+1999-05-26,6852184899,9485560219,18.279958724975582,24.028148651123047,189.22977917233112,1509188477,No,No
+2018-10-25,4514402886,0291595665,21.66460609436035,1228.1895751953125,235.7288107882077,2519225669,Yes,Yes
+2002-05-21,5604725777,9294607530,18.301380157470703,195.5757598876953,303.9720059558441,5658191480,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh, low combined 
+
+
+You generated this python code:
+df = dfs[0]
+plt.plot(df['High'], label='High')
+plt.plot(df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-04-28 14:11:50 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 14:11:51 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 14:11:51 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+1999-05-26,6852184899,9485560219,18.279958724975582,24.028148651123047,189.22977917233112,1509188477,No,No
+2018-10-25,4514402886,0291595665,21.66460609436035,1228.1895751953125,235.7288107882077,2519225669,Yes,Yes
+2002-05-21,5604725777,9294607530,18.301380157470703,195.5757598876953,303.9720059558441,5658191480,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh, low combined 
+
+
+You generated this python code:
+df = dfs[0]
+plt.plot(df['High'], label='High')
+plt.plot(df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 14:11:51 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.plot(df['High'], label='High')
+plt.plot(df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+
+result = plt.gcf()  # return the plot figure
+            ```
+            
+2025-04-28 14:11:51 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 14:11:51 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.plot(df['High'], label='High')
+plt.plot(df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+result = plt.gcf()
+        ```
+2025-04-28 14:11:51 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 8, in <module>
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\safe_libs\restricted_matplotlib.py", line 75, in __getattr__
+    raise AttributeError(f"'{name}' is not allowed in RestrictedMatplotlib")
+AttributeError: 'gcf' is not allowed in RestrictedMatplotlib
+
+2025-04-28 14:11:51 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-04-28 14:11:51 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 14:11:51 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 14:11:51 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+1999-05-26,6852184899,9485560219,18.279958724975582,24.028148651123047,189.22977917233112,1509188477,No,No
+2018-10-25,4514402886,0291595665,21.66460609436035,1228.1895751953125,235.7288107882077,2519225669,Yes,Yes
+2002-05-21,5604725777,9294607530,18.301380157470703,195.5757598876953,303.9720059558441,5658191480,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh, low combined 
+
+
+You generated this python code:
+df = dfs[0]
+plt.plot(df['High'], label='High')
+plt.plot(df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+result = plt.gcf()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 8, in <module>
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\safe_libs\restricted_matplotlib.py", line 75, in __getattr__
+    raise AttributeError(f"'{name}' is not allowed in RestrictedMatplotlib")
+AttributeError: 'gcf' is not allowed in RestrictedMatplotlib
+
+
+Fix the python code above and return the new python code:
+2025-04-28 14:11:51 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 14:11:51 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 14:11:51 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+1999-05-26,6852184899,9485560219,18.279958724975582,24.028148651123047,189.22977917233112,1509188477,No,No
+2018-10-25,4514402886,0291595665,21.66460609436035,1228.1895751953125,235.7288107882077,2519225669,Yes,Yes
+2002-05-21,5604725777,9294607530,18.301380157470703,195.5757598876953,303.9720059558441,5658191480,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh, low combined 
+
+
+You generated this python code:
+df = dfs[0]
+plt.plot(df['High'], label='High')
+plt.plot(df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+result = plt.gcf()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 8, in <module>
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\safe_libs\restricted_matplotlib.py", line 75, in __getattr__
+    raise AttributeError(f"'{name}' is not allowed in RestrictedMatplotlib")
+AttributeError: 'gcf' is not allowed in RestrictedMatplotlib
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 14:11:51 [INFO] Code generated:
+            ```
+            df = dfs[0]
+plt.plot(df['High'], label='High')
+plt.plot(df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.show()
+            ```
+            
+2025-04-28 14:11:51 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 14:11:51 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.plot(df['High'], label='High')
+plt.plot(df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+        ```
+2025-04-28 14:11:51 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 14:11:51 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-04-28 14:11:51 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 14:11:51 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 14:11:51 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+1999-05-26,6852184899,9485560219,18.279958724975582,24.028148651123047,189.22977917233112,1509188477,No,No
+2018-10-25,4514402886,0291595665,21.66460609436035,1228.1895751953125,235.7288107882077,2519225669,Yes,Yes
+2002-05-21,5604725777,9294607530,18.301380157470703,195.5757598876953,303.9720059558441,5658191480,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh, low combined 
+
+
+You generated this python code:
+df = dfs[0]
+plt.plot(df['High'], label='High')
+plt.plot(df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2025-04-28 14:11:51 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 14:11:52 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 14:11:52 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+1999-05-26,6852184899,9485560219,18.279958724975582,24.028148651123047,189.22977917233112,1509188477,No,No
+2018-10-25,4514402886,0291595665,21.66460609436035,1228.1895751953125,235.7288107882077,2519225669,Yes,Yes
+2002-05-21,5604725777,9294607530,18.301380157470703,195.5757598876953,303.9720059558441,5658191480,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh, low combined 
+
+
+You generated this python code:
+df = dfs[0]
+plt.plot(df['High'], label='High')
+plt.plot(df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 14:11:52 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+plt.show()
+            ```
+            
+2025-04-28 14:11:52 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 14:11:52 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.plot(df['Date'], df['High'], label='High')
+plt.plot(df['Date'], df['Low'], label='Low')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.title('High and Low Prices Over Time')
+plt.legend()
+        ```
+2025-04-28 14:11:52 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:52 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:52 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:53 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:11:53 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 14:11:53 [ERROR] Pipeline failed on step 6: No result returned
+2025-04-28 14:14:32 [INFO] Question: give the line plot for heigh
+
+2025-04-28 14:14:32 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2025-04-28 14:14:32 [INFO] Prompt ID: 8355b12b-e255-42d8-a4b9-9f68342ecffd
+2025-04-28 14:14:32 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-28 14:14:32 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-28 14:14:32 [INFO] Executing Step 1: CacheLookup
+2025-04-28 14:14:32 [INFO] Executing Step 2: PromptGeneration
+2025-04-28 14:14:32 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2012-09-07,20.654211044311523,25.47769355773925,9234673477,6881849209,9943407527,225.45912676007745,No,Yes
+2008-06-23,24.42445373535156,16.559072494506836,2580405889,5159944997,0216402597,7.168289563045769,Yes,Yes
+2016-02-03,41.497650146484375,1472.5,1475458227,0736944474,9528445699,30.797008521256277,Yes,No
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give the line plot for heigh
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-28 14:14:32 [INFO] Executing Step 3: CodeGenerator
+2025-04-28 14:14:33 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 14:14:33 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2012-09-07,20.654211044311523,25.47769355773925,9234673477,6881849209,9943407527,225.45912676007745,No,Yes
+2008-06-23,24.42445373535156,16.559072494506836,2580405889,5159944997,0216402597,7.168289563045769,Yes,Yes
+2016-02-03,41.497650146484375,1472.5,1475458227,0736944474,9528445699,30.797008521256277,Yes,No
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give the line plot for heigh
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-04-28 14:14:33 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is a list of DataFrames, we'll use the first one
+df = dfs[0]
+
+# Create a line plot for the High column
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'])
+plt.xlabel('Date')
+plt.ylabel('High')
+plt.title('High Over Time')
+plt.savefig('high_over_time.png')
+
+# Declare result var:
+result = {"type": "plot", "value": "high_over_time.png"}
+            ```
+            
+2025-04-28 14:14:33 [INFO] Executing Step 4: CachePopulation
+2025-04-28 14:14:33 [INFO] Executing Step 5: CodeCleaning
+2025-04-28 14:14:33 [INFO] Saving charts to C:\Users\ADMIN\Desktop\Chant wih CSV files - LLM\exports\charts\temp_chart.png
+2025-04-28 14:14:33 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'])
+plt.xlabel('Date')
+plt.ylabel('High')
+plt.title('High Over Time')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+        ```
+2025-04-28 14:14:33 [INFO] Executing Step 6: CodeExecution
+2025-04-28 14:14:33 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:14:34 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:15:05 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-04-28 14:15:05 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-04-28 14:15:05 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 14:15:05 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 14:15:05 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2012-09-07,20.654211044311523,25.47769355773925,9234673477,6881849209,9943407527,225.45912676007745,No,Yes
+2008-06-23,24.42445373535156,16.559072494506836,2580405889,5159944997,0216402597,7.168289563045769,Yes,Yes
+2016-02-03,41.497650146484375,1472.5,1475458227,0736944474,9528445699,30.797008521256277,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'])
+plt.xlabel('Date')
+plt.ylabel('High')
+plt.title('High Over Time')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-04-28 14:15:05 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 14:15:06 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 14:15:06 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2012-09-07,20.654211044311523,25.47769355773925,9234673477,6881849209,9943407527,225.45912676007745,No,Yes
+2008-06-23,24.42445373535156,16.559072494506836,2580405889,5159944997,0216402597,7.168289563045769,Yes,Yes
+2016-02-03,41.497650146484375,1472.5,1475458227,0736944474,9528445699,30.797008521256277,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'])
+plt.xlabel('Date')
+plt.ylabel('High')
+plt.title('High Over Time')
+plt.savefig('C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/ADMIN/Desktop/Chant wih CSV files - LLM/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 14:15:06 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+import pandas as pd
+
+df = dfs[0]
+
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'])
+plt.xlabel('Date')
+plt.ylabel('High')
+plt.title('High Over Time')
+plt.show()
+
+result = {'type': 'plot'}
+            ```
+            
+2025-04-28 14:15:06 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 14:15:06 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'])
+plt.xlabel('Date')
+plt.ylabel('High')
+plt.title('High Over Time')
+result = {'type': 'plot'}
+        ```
+2025-04-28 14:15:06 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:15:07 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:15:07 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\helpers\output_validator.py", line 87, in validate_result
+    if "plotly" in repr(type(result["value"])):
+                             ~~~~~~^^^^^^^^^
+KeyError: 'value'
+
+2025-04-28 14:15:07 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-04-28 14:15:07 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 14:15:07 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 14:15:07 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2012-09-07,20.654211044311523,25.47769355773925,9234673477,6881849209,9943407527,225.45912676007745,No,Yes
+2008-06-23,24.42445373535156,16.559072494506836,2580405889,5159944997,0216402597,7.168289563045769,Yes,Yes
+2016-02-03,41.497650146484375,1472.5,1475458227,0736944474,9528445699,30.797008521256277,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'])
+plt.xlabel('Date')
+plt.ylabel('High')
+plt.title('High Over Time')
+result = {'type': 'plot'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\helpers\output_validator.py", line 87, in validate_result
+    if "plotly" in repr(type(result["value"])):
+                             ~~~~~~^^^^^^^^^
+KeyError: 'value'
+
+
+Fix the python code above and return the new python code:
+2025-04-28 14:15:07 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 14:15:07 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 14:15:07 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2012-09-07,20.654211044311523,25.47769355773925,9234673477,6881849209,9943407527,225.45912676007745,No,Yes
+2008-06-23,24.42445373535156,16.559072494506836,2580405889,5159944997,0216402597,7.168289563045769,Yes,Yes
+2016-02-03,41.497650146484375,1472.5,1475458227,0736944474,9528445699,30.797008521256277,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'])
+plt.xlabel('Date')
+plt.ylabel('High')
+plt.title('High Over Time')
+result = {'type': 'plot'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\helpers\output_validator.py", line 87, in validate_result
+    if "plotly" in repr(type(result["value"])):
+                             ~~~~~~^^^^^^^^^
+KeyError: 'value'
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 14:15:07 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'])
+plt.xlabel('Date')
+plt.ylabel('High')
+plt.title('High Over Time')
+plt.show()  # Add this line to display the plot
+result = {'type': 'plot', 'value': plt}  # Corrected result dictionary
+            ```
+            
+2025-04-28 14:15:07 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 14:15:07 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'])
+plt.xlabel('Date')
+plt.ylabel('High')
+plt.title('High Over Time')
+result = {'type': 'plot', 'value': plt}
+        ```
+2025-04-28 14:15:08 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:15:08 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:15:08 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'pandasai.safe_libs.restricted_matplotlib.RestrictedMatplotlib'> must match with type plot
+
+2025-04-28 14:15:08 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-04-28 14:15:08 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 14:15:08 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 14:15:08 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2012-09-07,20.654211044311523,25.47769355773925,9234673477,6881849209,9943407527,225.45912676007745,No,Yes
+2008-06-23,24.42445373535156,16.559072494506836,2580405889,5159944997,0216402597,7.168289563045769,Yes,Yes
+2016-02-03,41.497650146484375,1472.5,1475458227,0736944474,9528445699,30.797008521256277,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'])
+plt.xlabel('Date')
+plt.ylabel('High')
+plt.title('High Over Time')
+result = {'type': 'plot', 'value': plt}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'pandasai.safe_libs.restricted_matplotlib.RestrictedMatplotlib'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-04-28 14:15:08 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 14:15:08 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 14:15:08 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2012-09-07,20.654211044311523,25.47769355773925,9234673477,6881849209,9943407527,225.45912676007745,No,Yes
+2008-06-23,24.42445373535156,16.559072494506836,2580405889,5159944997,0216402597,7.168289563045769,Yes,Yes
+2016-02-03,41.497650146484375,1472.5,1475458227,0736944474,9528445699,30.797008521256277,Yes,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give the line plot for heigh
+
+
+You generated this python code:
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'])
+plt.xlabel('Date')
+plt.ylabel('High')
+plt.title('High Over Time')
+result = {'type': 'plot', 'value': plt}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'pandasai.safe_libs.restricted_matplotlib.RestrictedMatplotlib'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 14:15:08 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'])
+plt.xlabel('Date')
+plt.ylabel('High')
+plt.title('High Over Time')
+plt.show()
+            ```
+            
+2025-04-28 14:15:08 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 14:15:08 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['High'])
+plt.xlabel('Date')
+plt.ylabel('High')
+plt.title('High Over Time')
+        ```
+2025-04-28 14:15:09 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:15:09 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-28 14:15:09 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-04-28 14:15:09 [ERROR] Pipeline failed on step 6: No result returned
+2025-04-28 14:15:39 [INFO] Question: give column names 
+
+2025-04-28 14:15:39 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2025-04-28 14:15:39 [INFO] Prompt ID: 23f3e032-6901-4222-8e2b-1d3b301c0681
+2025-04-28 14:15:39 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-28 14:15:39 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-28 14:15:39 [INFO] Executing Step 1: CacheLookup
+2025-04-28 14:15:40 [INFO] Executing Step 2: PromptGeneration
+2025-04-28 14:15:40 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2005-04-06,12.767409324645996,3389123316,220.95993041992188,8920031405,7912669005,8604398226,Yes,Yes
+2017-02-28,371.7676696777344,7669950887,183.6208648681641,2231775115,3346273794,5148009230,No,Yes
+2012-07-17,32.63258361816406,6309367629,887.625732421875,4381529559,7501779618,0916462400,No,No
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give column names 
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-28 14:15:40 [INFO] Executing Step 3: CodeGenerator
+2025-04-28 14:15:41 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 14:15:41 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2005-04-06,12.767409324645996,3389123316,220.95993041992188,8920031405,7912669005,8604398226,Yes,Yes
+2017-02-28,371.7676696777344,7669950887,183.6208648681641,2231775115,3346273794,5148009230,No,Yes
+2012-07-17,32.63258361816406,6309367629,887.625732421875,4381529559,7501779618,0916462400,No,No
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give column names 
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-04-28 14:15:41 [INFO] Code generated:
+            ```
+            import pandas as pd
+
+# Assuming dfs is a list of DataFrames, we'll use the first DataFrame
+df = dfs[0]
+
+# Get column names
+column_names = df.columns.tolist()
+
+# Declare result var:
+result = {"type": "dataframe", "value": pd.DataFrame({"Column Names": column_names}, index=[0])}
+            ```
+            
+2025-04-28 14:15:41 [INFO] Executing Step 4: CachePopulation
+2025-04-28 14:15:42 [INFO] Executing Step 5: CodeCleaning
+2025-04-28 14:15:42 [INFO] 
+Code running:
+```
+df = dfs[0]
+column_names = df.columns.tolist()
+result = {'type': 'dataframe', 'value': pd.DataFrame({'Column Names': column_names}, index=[0])}
+        ```
+2025-04-28 14:15:42 [INFO] Executing Step 6: CodeExecution
+2025-04-28 14:15:42 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 3, in <module>
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\safe_libs\base_restricted_module.py", line 13, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandas\core\frame.py", line 664, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandas\core\internals\construction.py", line 493, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandas\core\internals\construction.py", line 123, in arrays_to_mgr
+    arrays = _homogenize(arrays, index, dtype)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandas\core\internals\construction.py", line 620, in _homogenize
+    com.require_length_match(val, index)
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandas\core\common.py", line 571, in require_length_match
+    raise ValueError(
+ValueError: Length of values (9) does not match length of index (1)
+
+2025-04-28 14:15:42 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-04-28 14:15:42 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-28 14:15:42 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-28 14:15:42 [INFO] Using prompt: <dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2005-04-06,12.767409324645996,3389123316,220.95993041992188,8920031405,7912669005,8604398226,Yes,Yes
+2017-02-28,371.7676696777344,7669950887,183.6208648681641,2231775115,3346273794,5148009230,No,Yes
+2012-07-17,32.63258361816406,6309367629,887.625732421875,4381529559,7501779618,0916462400,No,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give column names 
+
+
+You generated this python code:
+df = dfs[0]
+column_names = df.columns.tolist()
+result = {'type': 'dataframe', 'value': pd.DataFrame({'Column Names': column_names}, index=[0])}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 3, in <module>
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\safe_libs\base_restricted_module.py", line 13, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandas\core\frame.py", line 664, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandas\core\internals\construction.py", line 493, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandas\core\internals\construction.py", line 123, in arrays_to_mgr
+    arrays = _homogenize(arrays, index, dtype)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandas\core\internals\construction.py", line 620, in _homogenize
+    com.require_length_match(val, index)
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandas\core\common.py", line 571, in require_length_match
+    raise ValueError(
+ValueError: Length of values (9) does not match length of index (1)
+
+
+Fix the python code above and return the new python code:
+2025-04-28 14:15:42 [INFO] Executing Step 1: CodeGenerator
+2025-04-28 14:15:42 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 14:15:42 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:7260x9
+Date,Open,High,Low,Close,Predicted High,Predicted Low,High Prediction Met,Low Prediction Met
+2005-04-06,12.767409324645996,3389123316,220.95993041992188,8920031405,7912669005,8604398226,Yes,Yes
+2017-02-28,371.7676696777344,7669950887,183.6208648681641,2231775115,3346273794,5148009230,No,Yes
+2012-07-17,32.63258361816406,6309367629,887.625732421875,4381529559,7501779618,0916462400,No,No
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give column names 
+
+
+You generated this python code:
+df = dfs[0]
+column_names = df.columns.tolist()
+result = {'type': 'dataframe', 'value': pd.DataFrame({'Column Names': column_names}, index=[0])}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 3, in <module>
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandasai\safe_libs\base_restricted_module.py", line 13, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandas\core\frame.py", line 664, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandas\core\internals\construction.py", line 493, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandas\core\internals\construction.py", line 123, in arrays_to_mgr
+    arrays = _homogenize(arrays, index, dtype)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandas\core\internals\construction.py", line 620, in _homogenize
+    com.require_length_match(val, index)
+  File "C:\Users\ADMIN\Desktop\stocks_intraday\venv\Lib\site-packages\pandas\core\common.py", line 571, in require_length_match
+    raise ValueError(
+ValueError: Length of values (9) does not match length of index (1)
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-28 14:15:42 [INFO] Code generated:
+            ```
+            df = dfs[0]
+column_names = df.columns.tolist()
+result = {'type': 'dataframe', 'value': pd.DataFrame({'Column Names': column_names}, index=range(len(column_names)))}
+            ```
+            
+2025-04-28 14:15:42 [INFO] Executing Step 2: CodeCleaning
+2025-04-28 14:15:42 [INFO] 
+Code running:
+```
+df = dfs[0]
+column_names = df.columns.tolist()
+result = {'type': 'dataframe', 'value': pd.DataFrame({'Column Names': column_names}, index=range(len(column_names)))}
+        ```
+2025-04-28 14:15:42 [INFO] Executing Step 7: ResultValidation
+2025-04-28 14:15:43 [INFO] Answer: {'type': 'dataframe', 'value':           Column Names
+0                 Date
+1                 Open
+2                 High
+3                  Low
+4                Close
+5       Predicted High
+6        Predicted Low
+7  High Prediction Met
+8   Low Prediction Met}
+2025-04-28 14:15:43 [INFO] Executing Step 8: ResultParsing
