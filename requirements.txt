@@ -1,6 +1,6 @@
 streamlit==1.24.0
 pandas==2.0.0
-pandasai==0.0.9
+pandasai
 langchain-groq==0.1.0
 seaborn==0.12.2
 matplotlib==3.7.1
