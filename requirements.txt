@@ -78,7 +78,7 @@ langchain==0.3.23
 langchain-community==0.3.21
 langchain-core==0.3.54
 langchain-experimental==0.3.4
-langchain-groq==0.3.2
+langchain-groq
 langchain-huggingface==0.1.2
 langchain-milvus==0.1.9
 langchain-openai==0.3.14
