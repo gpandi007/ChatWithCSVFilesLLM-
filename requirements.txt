@@ -1,6 +1,6 @@
 streamlit
 pandas
-pandasai==1.5.15
+pandasai
 langchain==0.0.350
 langchain-groq
 python-dotenv
